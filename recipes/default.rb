@@ -12,9 +12,9 @@ chef_server 'be01.vagrantup.com' do
   roles 'backend'
   addons %w(opscode-reporting opscode-push-jobs-server)
   machine_options vagrant_options: {
-      'vm.box' => 'opscode-centos-6.6',     
-      'vm.network' => ":private_network, :ip => '33.33.33.10'" 
-    }
+    'vm.box' => 'opscode-centos-6.6',
+    'vm.network' => ":private_network, :ip => '33.33.33.10'"
+  }
 end
 
 directory Chef::Config[:file_cache_path]
@@ -29,8 +29,8 @@ chef_server 'fe01.vagrantup.com' do
   roles 'frontend'
   addons %w(opscode-reporting opscode-push-jobs-server opscode-manage)
   machine_options vagrant_options: {
-    'vm.box' => 'opscode-centos-6.6',     
-    'vm.network' => ":private_network, :ip => '33.33.33.20'" 
+    'vm.box' => 'opscode-centos-6.6',
+    'vm.network' => ":private_network, :ip => '33.33.33.20'"
   }
 end
 
